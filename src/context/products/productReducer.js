@@ -15,13 +15,19 @@ export default (state, action) =>{
         case LIST_PRODUCT:
             return{
                 ...state,
-                products: [...state.products, action.payload]
+                products: action.payload
             }
         case EDIT_PRODUCT:
-            console.log(action.payload)
             return{
                 ...state,
                 activeProduct: action.payload
+            }
+        case EDIT_PRODUCT_OK:
+            return{
+                ...state,
+                products: state.products.map(element => 
+                    element.id === action.payload.id ? element = action.payload : element),
+                activeProduct: null
             }
 
         default:

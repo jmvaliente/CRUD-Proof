@@ -3,12 +3,12 @@
     {
       "id": 1,
       "name": "Laptop",
-      "quantity": "31",
-      "price": "200",
+      "quantity": "312s",
+      "price": "1002",
       "description": "Laptop Gamer"
     },
     {
-      "name": "prueba",
+      "name": "pruebaa",
       "description": "prueba descripcion",
       "quantity": "1",
       "price": "1",
@@ -31,7 +31,7 @@
     {
       "name": "prueba",
       "description": "prueba descripcion",
-      "quantity": "332",
+      "quantity": "332s",
       "price": "1",
       "id": 5
     },

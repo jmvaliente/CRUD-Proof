@@ -1,9 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react'
+import {Link, useHistory} from 'react-router-dom'
 
 import productContext from '../context/products/productContext'
 
 const ProductEdit = () => {
 
+    const history = useHistory()
     const context = useContext(productContext)
 
     const [state, setState] = useState({
@@ -14,7 +16,7 @@ const ProductEdit = () => {
     })
     
     //const {name, description, quantity, price} = state
-    const {activeProduct} = context
+    const {activeProduct, updateProductFn, listProductFn} = context
 
     useEffect( () => {
         setState(activeProduct)
@@ -25,6 +27,15 @@ const ProductEdit = () => {
             ...state,
             [e.target.name] : e.target.value
         })
+    }
+
+    const submitProduct = (e) =>{
+        e.preventDefault()
+
+        updateProductFn(state)
+
+        history.push('/')
+
     }
 
 
@@ -78,6 +89,7 @@ const ProductEdit = () => {
                 <div className="form-items">
                     <button
                         type="submit"
+                        onClick={submitProduct}
                     >Create Product
                     </button>
                 </div>

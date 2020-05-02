@@ -30,8 +30,7 @@ const Products = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {console.log(products[0])}
-                    {products[0].map(el => (<Product key={el.id} product={el}/>))}
+                    {products.map(el => (<Product key={el.id} product={el}/>))}
                 </tbody>
             </table>
         </Fragment>
