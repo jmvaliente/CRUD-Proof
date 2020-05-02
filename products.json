@@ -1,0 +1,11 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Laptop",
+        "quantity": "31",
+        "price": "200",
+        "description": "Laptop Gamer"
+      }
+    ]
+  }
