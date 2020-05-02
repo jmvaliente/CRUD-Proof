@@ -6,9 +6,10 @@ export default (state, action) =>{
     switch(action.type){
 
         case ADD_PRODUCT:
-            console.log("add product")
+            console.log(action.payload)
             return{
                 ...state,
+                products: [...state.products, action.payload]
             }
 
         default:

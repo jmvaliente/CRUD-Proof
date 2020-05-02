@@ -2,6 +2,8 @@ import React, { useReducer } from 'react'
 import ProductContext from './productContext'
 import ProductReducer from './productReducer'
 
+import clientAxios from '../../config/axios'
+
 import {ADD_PRODUCT, ADD_PRODUCT_OK, ADD_PRODUCT_ERROR} from '../../types'
 
 const ProductState = props => {
@@ -13,16 +15,26 @@ const ProductState = props => {
 
     const [state, dispatch] = useReducer(ProductReducer, initialState)
 
-    const addProductFn = (product) =>{
-        dispatch({
-            type: ADD_PRODUCT,
-            payload: product
-        })
+    const addProductFn = async (product) =>{
+
+        try {
+            const result = await clientAxios.post('/products', product)
+            dispatch({
+                type: ADD_PRODUCT,
+                payload: result.data
+            })
+            
+        } catch (error) {
+            console.log(error)   
+        }
+
     }
 
     return (
         <ProductContext.Provider
             value={{
+                products: state.products,
+
                 addProductFn
             }}
         >

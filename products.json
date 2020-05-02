@@ -1,11 +1,53 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Laptop",
-        "quantity": "31",
-        "price": "200",
-        "description": "Laptop Gamer"
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "quantity": "31",
+      "price": "200",
+      "description": "Laptop Gamer"
+    },
+    {
+      "name": "prueba",
+      "description": "prueba descripcion",
+      "quantity": "1",
+      "price": "1",
+      "id": 2
+    },
+    {
+      "name": "pruebas",
+      "description": "prueba descripcion",
+      "quantity": "332",
+      "price": "1",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "quantity": "",
+      "price": "",
+      "id": 4
+    },
+    {
+      "name": "prueba",
+      "description": "prueba descripcion",
+      "quantity": "332",
+      "price": "1",
+      "id": 5
+    },
+    {
+      "name": "prueba",
+      "description": "prueba descripcion",
+      "quantity": "332",
+      "price": "1",
+      "id": 6
+    },
+    {
+      "name": "",
+      "description": "",
+      "quantity": "",
+      "price": "",
+      "id": 7
+    }
+  ]
+}

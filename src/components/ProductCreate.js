@@ -31,15 +31,15 @@ const ProductCreate = () =>{
 
 
         //action
-
+        addProductFn(state)
 
         //reset
-    }
-
-
-
-    const onClickFn = () =>{
-        addProductFn()
+        setState({
+            name: '',
+            description: '',
+            quantity: '',
+            price: ''
+        })
     }
 
 
@@ -87,7 +87,7 @@ const ProductCreate = () =>{
                 <div className="form-items">
                     <button
                         type="submit"
-                        onClick={onClickFn}
+                        onClick={submitProduct}
                     >Create Product
                     </button>
                 </div>
