@@ -5,14 +5,16 @@ import ProductReducer from './productReducer'
 import clientAxios from '../../config/axios'
 
 import {ADD_PRODUCT, ADD_PRODUCT_OK, ADD_PRODUCT_ERROR,
-        LIST_PRODUCT, LIST_PRODUCT_OK, LIST_PRODUCT_ERROR
+        LIST_PRODUCT, LIST_PRODUCT_OK, LIST_PRODUCT_ERROR,
+        EDIT_PRODUCT, EDIT_PRODUCT_OK, EDIT_PRODUCT_ERROR
         } from '../../types'
 
 const ProductState = props => {
     const initialState = {
         products:[],
         error: null,
-        loading: false
+        loading: false,
+        activeProduct: null
     }
 
     const [state, dispatch] = useReducer(ProductReducer, initialState)
@@ -45,13 +47,22 @@ const ProductState = props => {
         }
     }
 
+    const editProductFn = (product) =>{
+        dispatch({
+            type: EDIT_PRODUCT,
+            payload: product
+        })
+    }
+
     return (
         <ProductContext.Provider
             value={{
                 products: state.products,
+                activeProduct: state.activeProduct,
 
                 addProductFn,
-                listProductFn
+                listProductFn,
+                editProductFn
             }}
         >
             {props.children}

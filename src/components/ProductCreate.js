@@ -28,7 +28,7 @@ const ProductCreate = () =>{
         e.preventDefault()
 
         //validate
-
+        
 
         //action
         addProductFn(state)
@@ -54,6 +54,7 @@ const ProductCreate = () =>{
                         type = "text"
                         placeholder = "Name Product"
                         name = "name"
+                        value = {name}
                         onChange = {changeEvent}
                     />
                 </div>
@@ -63,6 +64,7 @@ const ProductCreate = () =>{
                         type = "text"
                         placeholder = "Name Product"
                         name = "description"
+                        value = {description}
                         onChange = {changeEvent}
                     />
                 </div>
@@ -72,6 +74,7 @@ const ProductCreate = () =>{
                         type = "numbrer"
                         placeholder = "Quantity"
                         name = "quantity"
+                        value = {quantity}
                         onChange = {changeEvent}
                     />
                 </div>
@@ -81,6 +84,7 @@ const ProductCreate = () =>{
                         type = "numbrer"
                         placeholder = "Price Product"
                         name = "price"
+                        value = {price}
                         onChange = {changeEvent}
                     />
                 </div>

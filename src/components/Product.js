@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import {Link} from 'react-router-dom'
+
+import productContext from '../context/products/productContext'
+
 
 const Product = (element) =>{
 
-    const {name, description, quantity, price} = element.product
+    const context = useContext(productContext)
 
-    const onClickEdit = (task) => {
+    const {editProductFn} = context
 
+    const {name, description, quantity, price, id} = element.product
+
+    const onClickEdit = (product) => {
+        editProductFn(product)
     }
 
     const onClickDelete = (id) => {
@@ -29,10 +37,14 @@ const Product = (element) =>{
             </td>
             <td>
                 <div className="align-items-end">
-                    <button onClick = {() => onClickEdit(element.product)} className = "ml-2 p-2 bd-highlight badge badge-pill">Edit</button>
+                    <Link to ={`/product/edit/${id}`}
+                        onClick = {() => onClickEdit(element.product)}
+                    >Edit
+                    </Link>
                     <button
                         onClick = {onClickDelete} 
-                        className = "ml-2 p-2 bd-highlight badge badge-pill">Delete</button>
+                    >Delete
+                    </button>
                 </div>
             </td>
      </tr>
