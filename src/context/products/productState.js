@@ -4,7 +4,9 @@ import ProductReducer from './productReducer'
 
 import clientAxios from '../../config/axios'
 
-import {ADD_PRODUCT, ADD_PRODUCT_OK, ADD_PRODUCT_ERROR} from '../../types'
+import {ADD_PRODUCT, ADD_PRODUCT_OK, ADD_PRODUCT_ERROR,
+        LIST_PRODUCT, LIST_PRODUCT_OK, LIST_PRODUCT_ERROR
+        } from '../../types'
 
 const ProductState = props => {
     const initialState = {
@@ -30,12 +32,26 @@ const ProductState = props => {
 
     }
 
+    const listProductFn = async () => {
+        
+        try {
+           const result = await clientAxios.get('/products')
+           dispatch({
+               type:LIST_PRODUCT,
+               payload: result.data
+           })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <ProductContext.Provider
             value={{
                 products: state.products,
 
-                addProductFn
+                addProductFn,
+                listProductFn
             }}
         >
             {props.children}

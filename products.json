@@ -48,6 +48,20 @@
       "quantity": "",
       "price": "",
       "id": 7
+    },
+    {
+      "name": "prueba",
+      "description": "prueba descripcion",
+      "quantity": "12",
+      "price": "12",
+      "id": 8
+    },
+    {
+      "name": "",
+      "description": "",
+      "quantity": "",
+      "price": "",
+      "id": 9
     }
   ]
 }
