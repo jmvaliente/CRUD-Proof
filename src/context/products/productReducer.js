@@ -1,7 +1,8 @@
 import {
     ADD_PRODUCT, ADD_PRODUCT_OK, ADD_PRODUCT_ERROR,
     LIST_PRODUCT, LIST_PRODUCT_OK, LIST_PRODUCT_ERROR,
-    EDIT_PRODUCT, EDIT_PRODUCT_OK, EDIT_PRODUCT_ERROR
+    EDIT_PRODUCT, EDIT_PRODUCT_OK, EDIT_PRODUCT_ERROR,
+    DELETE_PRODUCT, DELETE_PRODUCT_OK, DELETE_PRODUCT_ERROR
 } from '../../types'
 
 export default (state, action) =>{
@@ -28,6 +29,12 @@ export default (state, action) =>{
                 products: state.products.map(element => 
                     element.id === action.payload.id ? element = action.payload : element),
                 activeProduct: null
+            }
+        case DELETE_PRODUCT:
+            return{
+                ...state,
+                products: state.products.filter(element => 
+                   element.id !== action.payload.id)
             }
 
         default:

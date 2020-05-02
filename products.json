@@ -1,81 +1,11 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Laptop",
-      "quantity": "312s",
-      "price": "1002",
-      "description": "Laptop Gamer"
-    },
-    {
-      "name": "pruebaa",
-      "description": "prueba descripcion",
-      "quantity": "1",
-      "price": "1",
-      "id": 2
-    },
-    {
-      "name": "pruebas",
-      "description": "prueba descripcion",
-      "quantity": "332",
-      "price": "1",
+      "name": "producto 2",
+      "description": "product 2",
+      "quantity": "23",
+      "price": "43",
       "id": 3
-    },
-    {
-      "name": "",
-      "description": "",
-      "quantity": "",
-      "price": "",
-      "id": 4
-    },
-    {
-      "name": "prueba",
-      "description": "prueba descripcion",
-      "quantity": "332s",
-      "price": "1",
-      "id": 5
-    },
-    {
-      "name": "prueba",
-      "description": "prueba descripcion",
-      "quantity": "332",
-      "price": "1",
-      "id": 6
-    },
-    {
-      "name": "",
-      "description": "",
-      "quantity": "",
-      "price": "",
-      "id": 7
-    },
-    {
-      "name": "prueba",
-      "description": "prueba descripcion",
-      "quantity": "12",
-      "price": "12",
-      "id": 8
-    },
-    {
-      "name": "",
-      "description": "",
-      "quantity": "",
-      "price": "",
-      "id": 9
-    },
-    {
-      "name": "prueba",
-      "description": "dsf",
-      "quantity": "333",
-      "price": "444",
-      "id": 10
-    },
-    {
-      "name": "prueba 1",
-      "description": "prueba1",
-      "quantity": "12",
-      "price": "34",
-      "id": 11
     }
   ]
 }

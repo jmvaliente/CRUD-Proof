@@ -8,7 +8,7 @@ const Product = (element) =>{
 
     const context = useContext(productContext)
 
-    const {editProductFn} = context
+    const {editProductFn, deleteProductFn} = context
 
     const {name, description, quantity, price, id} = element.product
 
@@ -16,8 +16,8 @@ const Product = (element) =>{
         editProductFn(product)
     }
 
-    const onClickDelete = (id) => {
-
+    const onClickDelete = (product) => {
+        deleteProductFn(product)
     }
 
 
@@ -42,7 +42,7 @@ const Product = (element) =>{
                     >Edit
                     </Link>
                     <button
-                        onClick = {onClickDelete} 
+                        onClick = {() => onClickDelete(element.product)} 
                     >Delete
                     </button>
                 </div>
