@@ -88,9 +88,10 @@ const ProductEdit = () => {
                 </div>
                 <div className="form-items">
                     <button
+                        className="form-items-buttom"
                         type="submit"
                         onClick={submitProduct}
-                    >Create Product
+                    >Edit Product
                     </button>
                 </div>
             </form>

@@ -89,7 +89,8 @@ const ProductCreate = () =>{
                     />
                 </div>
                 <div className="form-items">
-                    <button
+                    <button 
+                        className="form-items-buttom"
                         type="submit"
                         onClick={submitProduct}
                     >Create Product

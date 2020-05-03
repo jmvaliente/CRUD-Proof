@@ -23,24 +23,27 @@ const Product = (element) =>{
 
     return(
         <tr>
-            <td>
+            <td className="form-items">
                 <p>{name}</p> 
             </td>
-            <td>
+            <td className="form-items">
                 <p>{description}</p>
             </td>
-            <td>
+            <td className="form-items">
                 <p>{quantity}</p> 
             </td>
-            <td>
+            <td className="form-items">
                 <p>{price}</p>
             </td>
-            <td>
+            <td className="form-items">
                 <div className="align-items-end">
+                    <button>
                     <Link to ={`/product/edit/${id}`}
+                        className="form-items-buttom"
                         onClick = {() => onClickEdit(element.product)}
                     >Edit
                     </Link>
+                    </button>
                     <button
                         onClick = {() => onClickDelete(element.product)} 
                     >Delete

@@ -17,23 +17,23 @@ const Products = () => {
     if(products==false) return null
 
     return(
-        <Fragment>
+        <div className = "container-flex">
             <h1>Products</h1>
-            <table>
-                <thead>
+            <table className="table-flex">
+                <thead className= "table-flex-head">
                     <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Actions</th>
+                        <th className="form-items">Name</th>
+                        <th className="form-items">Description</th>
+                        <th className="form-items">Quantity</th>
+                        <th className="form-items">Price</th>
+                        <th className="form-items">Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className= "table-flex-body">
                     {products.map(el => (<Product key={el.id} product={el}/>))}
                 </tbody>
             </table>
-        </Fragment>
+        </div>
     )
 }
 

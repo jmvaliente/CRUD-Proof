@@ -32,6 +32,11 @@ code {
   width: 100%;
 }
 
+.form-items-buttom {
+  padding: 1rem;
+  text-decoration: none;
+}
+
 .contenedor-input label {
   margin-bottom: 1rem;
   color: var(--blanco);
@@ -41,3 +46,83 @@ code {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* Navbar */
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 15px;
+}
+
+nav ul p {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav ul li:hover {
+  background-color: rgb(21, 36, 36);
+}
+
+.navbar-flex{
+  display: flex;
+  justify-content: space-between;
+  background-color: darkslategrey;
+  flex-direction: column;
+}
+
+.navbar-flex-options ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width:768px){
+  .navbar-flex{
+    flex-direction: row;
+  }
+  .navbar-flex-options ul{
+    flex-direction: row;
+  }
+}
+
+/* Navbar */
+
+/*Table List*/
+
+.container-flex{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  max-width: 80%;
+  flex-wrap: wrap;
+}
+
+.table-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: 
+}
+
+
+.table-flex-head tr{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.table-flex-body tr{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+/*Table List*/
