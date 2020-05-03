@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect} from 'react'
+import React, {useContext, useEffect} from 'react'
 
 import Product from './Product'
 
@@ -12,9 +12,10 @@ const Products = () => {
 
     useEffect(()=>{
         listProductFn()
+        // eslint-disable-next-line
     },[])
 
-    if(products==false) return null
+    if(products===false) return null
 
     return(
         <div className = "container-flex">

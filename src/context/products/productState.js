@@ -4,12 +4,8 @@ import ProductReducer from './productReducer'
 
 import clientAxios from '../../config/axios'
 
-import {ADD_PRODUCT, ADD_PRODUCT_OK, ADD_PRODUCT_ERROR,
-        LIST_PRODUCT, LIST_PRODUCT_OK, LIST_PRODUCT_ERROR,
-        EDIT_PRODUCT, EDIT_PRODUCT_OK, EDIT_PRODUCT_ERROR,
-        DELETE_PRODUCT, DELETE_PRODUCT_OK, DELETE_PRODUCT_ERROR
+import {ADD_PRODUCT, LIST_PRODUCT, EDIT_PRODUCT, EDIT_PRODUCT_OK, DELETE_PRODUCT
         } from '../../types'
-import Axios from 'axios'
 
 const ProductState = props => {
     const initialState = {

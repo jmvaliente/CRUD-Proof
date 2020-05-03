@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import {Link, useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 
 import productContext from '../context/products/productContext'
 
@@ -16,7 +16,7 @@ const ProductEdit = () => {
     })
     
     //const {name, description, quantity, price} = state
-    const {activeProduct, updateProductFn, listProductFn} = context
+    const {activeProduct, updateProductFn} = context
 
     useEffect( () => {
         setState(activeProduct)

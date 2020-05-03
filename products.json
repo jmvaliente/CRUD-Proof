@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "Product 1",
-      "description": "Producto 1 Description",
+      "description": "Product 1 Description",
       "quantity": "43",
       "price": "65",
       "id": 3
@@ -13,6 +13,13 @@
       "quantity": "26",
       "price": "19",
       "id": 4
+    },
+    {
+      "name": "Product 5",
+      "description": "Product 5 Description",
+      "quantity": "23",
+      "price": "59",
+      "id": 5
     }
   ]
 }
