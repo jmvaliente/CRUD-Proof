@@ -1,6 +1,14 @@
 import React from 'react'
+import {useHistory} from 'react-router-dom'
 
 const Login = () =>{
+
+    const history = useHistory()
+
+    const listProduct = () =>{
+       history.push('/')
+    }
+
     return(
             <main className="form-login container">
                 <form action="#">
@@ -14,7 +22,7 @@ const Login = () =>{
                         <label>Password</label>
                     </div>
                     <div className="submit">
-                        <input type="submit" value="Submit"/>
+                       <input type="submit" onClick={() => listProduct()} value="Submit"/>
                     </div>
                 </form>
 

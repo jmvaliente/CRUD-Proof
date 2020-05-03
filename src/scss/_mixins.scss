@@ -20,3 +20,15 @@
 @mixin box-sizing($box-model){
     box-sizing: $box-model;
 }
+
+@mixin button($bgcolor) {
+    background-color: $bgcolor;
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    padding: 1rem 0rem;
+    font-size: 1rem;
+}
