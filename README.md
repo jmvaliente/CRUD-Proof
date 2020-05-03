@@ -16,3 +16,5 @@
 
 <h4>imagenes</h4>
 <img src="/public/img/login.png">
+<img src="/public/img/list.png">
+<img src="/public/img/create.png">
