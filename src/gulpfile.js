@@ -10,4 +10,9 @@ function css() {
         .pipe ( gulp.dest('css'))
 }
 
+function watch() {
+    gulp.watch('scss/*.scss',css)
+}
+
 gulp.task('css',css)
+gulp.task('watch', gulp.parallel(watch))

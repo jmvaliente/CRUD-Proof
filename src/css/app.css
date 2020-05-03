@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .form-login {
+    background-color: rgba(0, 0, 0, 0.23);
+    max-width: 400px;
+    padding: 4rem 4rem;
+    margin: 2rem auto 4rem auto;
+  }
+}
+
+form legend {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+form .field {
+  display: flex;
+  position: relative;
+}
+
+form .field label {
+  position: absolute;
+}
+
+form .field input {
+  flex: 1;
+}

@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'mixins';
+
+html{
+    @include box-sizing(border-box);
+}
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.form-login{
+    @include tablet{
+        background-color: rgba(0,0,0,0.23);
+        max-width: 400px;
+        padding: 4rem 4rem;
+        margin: 2rem auto 4rem auto;
+    }
+}
+
+form{
+    legend{
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .field{
+        display: flex;
+        position: relative;
+        label{
+            position: absolute;
+        }
+        input{
+            flex: 1
+        }
+    }
+}
