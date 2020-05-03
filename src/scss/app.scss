@@ -32,11 +32,22 @@ form{
     .field{
         display: flex;
         position: relative;
+        margin-bottom: .4rem;
         label{
             position: absolute;
+            top: .5rem;
+            left: .7rem;
         }
         input{
-            flex: 1
+            flex: 1;
+            padding: 1rem .5rem .5rem 0.5rem;
+            border: none;
+            &:focus{
+                +label{
+                    font-size: .6rem;
+                    top: .2rem;
+                }
+            }
         }
     }
 }
